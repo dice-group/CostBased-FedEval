@@ -108,6 +108,7 @@ We have compared 5 - [CostFed](https://svn.aksw.org/papers/2018/SEMANTICS_CostFe
 Our complete evaluation results can be found [here](https://github.com/dice-group/CostBased-FedEval/blob/master/results/CostBased-FedEval-Results%20(1)%20(1).xlsx)
 
 ### Canonical Citations
+There is no predecessor paper of this resource, as such there is not direct canonical citations associated with the resource. However, the resource presented an evaluation of the following contributions. 
 
 M. Saleem, A. Potocki, T. Soru, O. Hartig, and A.-C. Ngonga Ngomo.  Costfed:Cost-based query optimization for sparql endpoint federation.  06 2018.
 
