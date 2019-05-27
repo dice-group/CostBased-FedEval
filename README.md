@@ -10,7 +10,7 @@ Please follow the steps to reproduce our results.
 * Download the runable jar files of the selected cost-based federation engines from [here](https://github.com/dice-group/CostBased-FedEval/tree/master/jars) except Odyssey, for Odyssey there are many dependencies involved and classes are run using scripts provided in scripts folder of project zip file. Detailed instructions to run the engine is provided at Odyssey [home page](https://github.com/gmontoya/federatedOptimizer), updated code with our metric is available [here](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code/Odyssey/federatedOptimizer). 
 #### Generating results from jars 
 For generating results after above setups, next step is generate the summaries(not needed for engines using VoID descriptions, as it is already provided along with [source code](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code)) and then run the engine using the jar files, we provided. Running queries on engines will result in producing similarity files which contains information related to Acctual and Estimated cardinalities, and overall similarity values of query plan. You can run the jar files using CLI replacing argumnets with following commands:
-``` htlm
+``` html
 <CostFed: Generating summaries>
 
 java -jar costfed-summaries.jar [path-of-(summary.n3)-file] [path-of-endpoints-text-file-folder]
