@@ -8,7 +8,7 @@ We evaluate the query planners of five different cost-based federated SPARQL que
 Please follow the steps to reproduce our results. 
 * First you need to setup LargeRDFBench. The complete details can be found from LargeRDFBench [home page](https://github.com/dice-group/largerdfbench)
 * Download the runable jar files of the selected cost-based federation engines from [here](https://github.com/dice-group/CostBased-FedEval/tree/master/jars) except Odyssey, for Odyssey there are many dependencies involved and classes are run using scripts provided in scripts folder of project zip file. Detailed instructions to run the engine is provided at Odyssey [home page](https://github.com/gmontoya/federatedOptimizer), updated code with our metric is available [here](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code/Odyssey/federatedOptimizer). 
-### For generating results from jars 
+#### Generating results from jars 
 For generating results after above setups, next step is generate the summaries(not needed for engines using VoID descriptions, as it is already provided along with [source code](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code)) and then run the engine using the jar files, we provided. Running queries on engines will result in producing similarity files which contains information related to Acctual and Estimated cardinalities, and overall similarity values of query plan. You can run the jar files using CLI replacing argumnets with following commands:
 
 **CostFed: Generating summaries:
@@ -71,7 +71,7 @@ Second thing which is important to notice is that, in other engines except LHD q
 
 For the case of oddyssey, first you need to extract [project](federatedOptimizer.rar), second step will be to compile the code in code folder, and then you need to run the script(executeQueriesOdyssey.sh) in scripts folder replacing some paths in the script file. For complete instruction you may refer to project readme [file](https://github.com/gmontoya/federatedOptimizer/blob/master/README.md) and [issue page](https://github.com/gmontoya/federatedOptimizer/issues/2), that we posted in order to run the engine successfully. 
 
-### Generating Results from Source code
+#### Generating Results from Source code
 Source code is available [here](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code) , Import each engine as seperate project. It contains 5 -- CostFed, LHD, SemaGrow, splendid-test, Odyssey -- java projects. Each project could be compiled and run seperately. Main files are as following (arguments will be same as in jar files discussed before):
 
 ```
