@@ -19,9 +19,9 @@ java -jar costfed-summaries.jar /home/MuhammadSaleem/umair/evaluation/experiment
 
 
 \\endpoints file should contain the URLs of all endpoints
-```
+
 **CostFed: Executing Queries and Generating plan similarity and cardinality values:
-```
+
 java -jar costfed-core.jar [path-of-(costfed.props)-file] [path-of-query-results-folder] [path-of-queries-folder] [path-of-endpoints-file-folder]  [path-of-similarity-results-folder]
 example:
 java -jar costfed-core.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/costfed/costfed.props /home/MuhammadSaleem/umair/evaluation/experiments/query_results /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries /home/MuhammadSaleem/umair/evaluation/experiments/endpoints  /home/MuhammadSaleem/umair/evaluation/experiments/queries/results
