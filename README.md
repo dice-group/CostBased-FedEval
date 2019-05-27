@@ -11,7 +11,7 @@ Please follow the steps to reproduce our results.
 #### Generating results from jars 
 For generating results after above setups, next step is generate the summaries(not needed for engines using VoID descriptions, as it is already provided along with [source code](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code)) and then run the engine using the jar files, we provided. Running queries on engines will result in producing similarity files which contains information related to Acctual and Estimated cardinalities, and overall similarity values of query plan. You can run the jar files using CLI replacing argumnets with following commands:
 ``` htlm
-**CostFed: Generating summaries:
+<CostFed: Generating summaries>
 
 java -jar costfed-summaries.jar [path-of-(summary.n3)-file] [path-of-endpoints-text-file-folder]
 example:
@@ -20,7 +20,7 @@ java -jar costfed-summaries.jar /home/MuhammadSaleem/umair/evaluation/experiment
 
 \\endpoints file should contain the URLs of all endpoints
 
-**CostFed: Executing Queries and Generating plan similarity and cardinality values:
+<CostFed: Executing Queries and Generating plan similarity and cardinality values>
 
 java -jar costfed-core.jar [path-of-(costfed.props)-file] [path-of-query-results-folder] [path-of-queries-folder] [path-of-endpoints-file-folder]  [path-of-similarity-results-folder]
 example:
@@ -28,21 +28,21 @@ java -jar costfed-core.jar /home/MuhammadSaleem/umair/evaluation/experiments/Lar
 
 \\example constfed.props file in source code folder.We should set Relative_Error variable to "true" in costfed.prop file. More details about properties and index files is mentioned on project [page](https://github.com/dice-group/CostFed).
 
-**semaGrow: Generating summaries
+<SemaGrow: Generating summaries>
 
 java -jar semagrow-summary-1.4.1.jar [path-of-endpoints-file-folder] [path-of-SemaGrow-index-file]
 example:
 java -jar semagrow-summary-1.4.1.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/semagrow/semagrow4.ttl
 
 
-**SemaGrow: Executing Queries and Generating plan similarity and cardinality values
+<SemaGrow: Executing Queries and Generating plan similarity and cardinality values>:
 
 java -jar semagrow-core-1.4.1.jar [path-to-(results.csv)-file] [path-to-qeruries-file] [path-to-similatiy-error-folder] [path-to-(repository-index.ttl)-file] true 
 
 example:
 java -jar semagrow-core-1.4.1.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/results/results.csv /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/queries /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/similarityResults /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/semagrow/repositoryindex.ttl true
 
-**SPLENDID: Executing Queries and Generating plan similarity and cardinality values
+<SPLENDID: Executing Queries and Generating plan similarity and cardinality values>
 
 \\SPLENDID uses VoID 
 
@@ -53,7 +53,7 @@ java -jar splendid-orignal.jar /home/MuhammadSaleem/umair/evaluation/experiments
 
 
 
-**LHD: Executing Queries and Generating plan similarity and cardinality values
+<LHD: Executing Queries and Generating plan similarity and cardinality values>
 
 \\LHD uses VoID 
 java -jar LHD.jar [path-to-stats-file] [path-to-queries-file] [path-to-similarity-results-folder] [true]
