@@ -10,41 +10,41 @@ Please follow the steps to reproduce our results.
 * Download the runable jar files of the selected cost-based federation engines from [here](https://github.com/dice-group/CostBased-FedEval/tree/master/jars) except Odyssey, for Odyssey there are many dependencies involved and classes are run using scripts provided in scripts folder of project zip file. Detailed instructions to run the engine is provided at Odyssey [home page](https://github.com/gmontoya/federatedOptimizer), updated code with our metric is available [here](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code/Odyssey/federatedOptimizer). 
 #### Generating results from jars 
 For generating results after above setups, next step is generate the summaries(not needed for engines using VoID descriptions, as it is already provided along with [source code](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code)) and then run the engine using the jar files, we provided. Running queries on engines will result in producing similarity files which contains information related to Acctual and Estimated cardinalities, and overall similarity values of query plan. You can run the jar files using CLI replacing argumnets with following commands:
-``` javascript
-<CostFed: Generating summaries>
+``` html
+### CostFed: Generating summaries ###
 
 java -jar costfed-summaries.jar [path-of-(summary.n3)-file] [path-of-endpoints-text-file-folder]
 example:
 java -jar costfed-summaries.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/costfed/summaries/summary.n3 /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/endpoints
 
+Note: endpoints file should contain the URLs of all endpoints
 
-\\endpoints file should contain the URLs of all endpoints
-
-<CostFed: Executing Queries and Generating plan similarity and cardinality values>
+### CostFed: Executing Queries and Generating plan similarity and cardinality values ###
 
 java -jar costfed-core.jar [path-of-(costfed.props)-file] [path-of-query-results-folder] [path-of-queries-folder] [path-of-endpoints-file-folder]  [path-of-similarity-results-folder]
 example:
 java -jar costfed-core.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/costfed/costfed.props /home/MuhammadSaleem/umair/evaluation/experiments/query_results /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries /home/MuhammadSaleem/umair/evaluation/experiments/endpoints  /home/MuhammadSaleem/umair/evaluation/experiments/queries/results
 
-\\example constfed.props file in source code folder.We should set Relative_Error variable to "true" in costfed.prop file. More details about properties and index files is mentioned on project [page](https://github.com/dice-group/CostFed).
+Note: example constfed.props file in source code folder.We should set Relative_Error variable to "true" in costfed.prop file. More details about properties and index files is mentioned on project [page](https://github.com/dice-group/CostFed).
 
-<SemaGrow: Generating summaries>
+### SemaGrow: Generating summaries ###
 
 java -jar semagrow-summary-1.4.1.jar [path-of-endpoints-file-folder] [path-of-SemaGrow-index-file]
 example:
 java -jar semagrow-summary-1.4.1.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/semagrow/semagrow4.ttl
 
 
-<SemaGrow: Executing Queries and Generating plan similarity and cardinality values>:
+### SemaGrow: Executing Queries and Generating plan similarity and cardinality values ###
 
 java -jar semagrow-core-1.4.1.jar [path-to-(results.csv)-file] [path-to-qeruries-file] [path-to-similatiy-error-folder] [path-to-(repository-index.ttl)-file] true 
 
 example:
 java -jar semagrow-core-1.4.1.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/results/results.csv /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/queries /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/similarityResults /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/semagrow/repositoryindex.ttl true
 
-<SPLENDID: Executing Queries and Generating plan similarity and cardinality values>
 
-\\SPLENDID uses VoID 
+### SPLENDID: Executing Queries and Generating plan similarity and cardinality values ###
+
+Note: SPLENDID uses VoID statistics
 
 java -jar splendid-orignal.jar [path-to-file-(federation-test.properties)] [path-to-splendid-output-file] [path-to-queries-folder] [path-to-similarity-results-file] [true]
 
@@ -53,24 +53,23 @@ java -jar splendid-orignal.jar /home/MuhammadSaleem/umair/evaluation/experiments
 
 
 
-<LHD: Executing Queries and Generating plan similarity and cardinality values>
+### LHD: Executing Queries and Generating plan similarity and cardinality values ###
 
-\\LHD uses VoID 
+Note: LHD uses VoID 
 java -jar LHD.jar [path-to-stats-file] [path-to-queries-file] [path-to-similarity-results-folder] [true]
 
 example:
 java -jar LHD.jar /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/index/lhd/stats /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/lhdqueries /home/MuhammadSaleem/umair/evaluation/experiments/LargeRDFBenchQueries/queries/results true
 
-```
 
 Notice that in arguments, if file is mentioned then we give path to exact file, if folder is mentioned then we give path to folder of respective file/files. 
-
 Second thing which is important to notice is that, in other engines except LHD queries folder contains all queries in seperate files, while in LHD all queries are placed in single file. Sample is [here](queries/lhdqueries.txt).
 
-***Odyssey:
+### Odyssey ###
 
 For the case of oddyssey, first you need to extract [project](federatedOptimizer.rar), second step will be to compile the code in code folder, and then you need to run the script(executeQueriesOdyssey.sh) in scripts folder replacing some paths in the script file. For complete instruction you may refer to project readme [file](https://github.com/gmontoya/federatedOptimizer/blob/master/README.md) and [issue page](https://github.com/gmontoya/federatedOptimizer/issues/2), that we posted in order to run the engine successfully. 
 
+```
 #### Generating Results from Source code
 Source code is available [here](https://github.com/dice-group/CostBased-FedEval/tree/master/source%20code) , Import each engine as seperate project. It contains 5 -- CostFed, LHD, SemaGrow, splendid-test, Odyssey -- java projects. Each project could be compiled and run seperately. Main files are as following (arguments will be same as in jar files discussed before):
 
