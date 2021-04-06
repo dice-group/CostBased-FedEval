@@ -124,10 +124,35 @@ O. G ̈orlitz and S.  Staab.   Splendid:  Sparql endpoint federation  exploiting
 ### Future plan: 
 We will add the resource results in to [RdfStoreBenchmarking](https://www.w3.org/wiki/RdfStoreBenchmarking) same like we did for our other published benchmarking results such as [DBpedia SPARQL benchmark](http://jens-lehmann.org/files/2011/dbpsb.pdf), [FEASIBL](http://svn.aksw.org/papers/2015/ISWC_FEASIBLE/public.pdf) and Federation evaluation.
 
+## Acknowledgement 
+The work has been supported by the EU H2020 Marie Skłodowska-Curie project KnowGraphs. 
+
+## How to cite
+```
+@article{qudus2020empirical,
+  author = {Qudus, Umair and Saleem, Muhammad and Ngonga Ngomo, Axel-Cyrille and Lee, Young-koo},
+  biburl = {https://www.bibsonomy.org/bibtex/2f89a005fbe4ab3882ee190610de0e5e7/dice-research},
+  journal = {Semantic Web},
+  keywords = {dice group_aksw ngonga qudus saleem simba},
+  number = {Preprint},
+  pages = {1--26},
+  publisher = {IOS Press},
+  title = {An empirical evaluation of cost-based federated SPARQL query processing engines},
+  url = {http://www.semantic-web-journal.net/system/files/swj2604.pdf},
+  year = 2021
+}
+```
+
+For any further questions or suggestions, please contact:  ```uqudus@mail.uni-paderborn.de```
+
+
 ### Authors
-  * Umair Qudus (DKE, Kyung Hee University) 
+  * [Umair Qudus](https://dice-research.org/UmairQudus) (DKE, Kyung Hee University) 
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
   * [Young-Koo Lee](http://dke.khu.ac.kr/wordpress/professor) (DKE, Kyung Hee University) 
+  
+  
+  
   
 
