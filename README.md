@@ -147,7 +147,7 @@ For any further questions or suggestions, please contact:  ```uqudus@mail.uni-pa
 
 
 ### Authors
-  * [Umair Qudus](https://dice-research.org/UmairQudus) (DKE, Kyung Hee University) 
+  * [Umair Qudus](https://dice-research.org/UmairQudus) (DICE, Paderborn University) 
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
   * [Young-Koo Lee](http://dke.khu.ac.kr/wordpress/professor) (DKE, Kyung Hee University) 
